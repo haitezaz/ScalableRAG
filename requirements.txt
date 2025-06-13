@@ -1,0 +1,16 @@
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-groq
+langchain-cohere
+openai
+groq
+python-dotenv
+faiss-cpu
+rank-bm25
+jinja2
+python-multipart
+tiktoken
+fastapi
+uvicorn
