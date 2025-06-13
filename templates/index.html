@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Lean Startup Q&A</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f8f9fa;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+    .response {
+      margin-top: 2rem;
+      background: #ecf0f1;
+      padding: 1rem;
+      border-left: 5px solid #3498db;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Lean Startup Q&A</h1>
+  <form method="post" action="/ask">
+    <label for="query">Ask a question about The Lean Startup:</label>
+    <textarea name="query" id="query" required placeholder="e.g., What is a Minimum Viable Product?"></textarea>
+    <button type="submit">Ask</button>
+  </form>
+
+  {% if response %}
+    <div class="response">
+      <strong>Answer:</strong>
+      <p>{{ response }}</p>
+    </div>
+  {% endif %}
+</body>
+</html>
